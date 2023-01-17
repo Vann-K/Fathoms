@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Name: A Coding Challenge</title>
+    <title>Dub100ns: A Coding Challenge</title>
 
     <!-- DEVICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
@@ -27,7 +27,7 @@
             <div class="container-xxl">
                 <a class="navbar-brand" href="/index.html">
                     <img src="/img/Kraken-Footer-Logo.svg" height="50" />
-                    <span class="ms-3">App Name</span>
+                    <span class="ms-3">Dub100ns</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -61,10 +61,44 @@
             </div>
         </nav>
     </header>
-    <main class="container">
-        <h1> APP UI GOES HERE </h1>
-        <input id="message" type="text" placeholder="Enter a message">
-        <button class="btn btn-primary" type="button" id="btnSubmit">Display a Message.</button>
+    <main class="container px-4 py-5">
+        <div class="row h-100 row-cols-1 row-cols-md-2 gy-2">
+            <div class="col border-2 border-end">
+                <h1 class="fw-bold mb-3">Dub100ns: A Javascript Challenge</h1>
+                <h4 class="lead">Loop by loop, we display numbers from 0 to 100. Even numbers? Those are
+                    <strong>BOLD</strong>. - This was a javascript challenge.
+                </h4>
+                <h2 class="mt-5 border-2 border-bottom">Instructions</h2>
+                <p>Enter a starting value and ending value. Press the button and the values will appear in order with
+                    even
+                    numbers in <strong>bold</strong>.</p>
+            </div>
+            <div class="col">
+                <form action="#" class="row gy-2 gx-3">
+                    <div class="col">
+                        <input id="startValue" type="number" class="form-control" placeholder="Starting Value"
+                            aria-label="Starting Value" value="0">
+                    </div>
+                    <div class="col">
+                        <input type="number" id="endValue" class="form-control" placeholder="Ending Value"
+                            aria-label="Ending Value" value="100">
+                    </div>
+                    <div class="col-12 d-flex justify-content-end">
+                        <button class="btn btn-dark btn-lg" id="btnSubmit" type="button">Get countin'!</button>
+                    </div>
+                </form>
+                <h2 class="mt-5 border-bottom border-2">How many dubloons?!</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <tbody id="dubloonCount">
+                            <!-- Count goes here
+                            <tr><td>1</td></tr>
+                         -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="container-fluid py-2">
         <div class="row align-items-center footer-main">
@@ -100,7 +134,7 @@
 
     <!-- Event Listener -->
     <script>
-        document.getElementById('btnSubmit').addEventListener('click', displayMessage);
+        document.getElementById('btnSubmit').addEventListener('click', getValues);
     </script>
 
 </body>
