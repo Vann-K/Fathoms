@@ -61,19 +61,24 @@ function displayNumbers(numbersArray) {
     for (let i = 0; i < numbersArray.length; i++) {
 
         let value = numbersArray[i];
-        if (numbersArray[i] % 2 != 0) {
-            let tableRow = `<tr><td>${value}</td></tr>`;
+        let className = '';
+        value % 2 == 0 ? className = 'even' : className = 'odd'
 
-            tableHTML = tableHTML + tableRow;
-            // tableHTML += tableRow;
-        } else {
-            let tableRow = `<tr><td><strong>${value}</strong></td></tr>`;
 
-            tableHTML = tableHTML + tableRow;
-            // tableHTML += tableRow;
+
+        if (i % 5 == 0) {
+            tableHTML += '<tr>';
         }
+
+
+        tableHTML += `<td class="${className}">${value}</td>`
+
+        if ((i + 1) % 5 == 0) {
+            tableHTML += '</tr>';
+        }
+
+
     }
 
     tableBody.innerHTML = tableHTML;
-
 }
