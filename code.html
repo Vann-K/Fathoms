@@ -183,7 +183,14 @@ function displayNumbers(numbersArray) {
                     and if statements to build the html.
                 </p>
                 <p>
-                    The ternary statement <code>value % 2 == 0 ? className = 'even' : className = 'odd'</code>
+                    The ternary statement <code>value % 2 == 0 ? className = 'even' : className = 'odd'</code> assigns
+                    the value of 'even' if the value is divisible by 2 with 0 remainder, or 'odd' if it has a remainder.
+                    Then we get into the if statements. If the value of <code>i</code> divided by 5 has a remainder of 0
+                    then it attaches a &lt;tr&gt; to tableHTML. Then tableHTML adds what its current value is as a
+                    string template literal. Following that we look into the future a bit. If the value of
+                    <code>i + 1</code> is divisble by 5 it adds a &lt;/tr&gt; to the tableHTML.
+                </p>
+                <p>Finally, it places the created element into the HTML and it is displayed for the user on the page.
                 </p>
 
             </div>
