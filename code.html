@@ -141,14 +141,14 @@ function displayNumbers(numbersArray) {
 
 
         if (i % 5 == 0) {
-            tableHTML += '<tr>';
+            tableHTML += '&lt;tr>';
         }
 
 
-        tableHTML += `<td class="${className}">${value}</td>`
+        tableHTML += `&lt;td class="${className}">${value}&lt;/td>`
 
         if ((i + 1) % 5 == 0) {
-            tableHTML += '</tr>';
+            tableHTML += '&lt;/tr>';
         }
 
 
