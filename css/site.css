@@ -20,6 +20,7 @@ body {
 body {
     display: flex;
     flex-direction: column;
+    background-color: var(--vk-secondary-color);
 }
 
 main {
@@ -119,4 +120,8 @@ footer {
 
 .odd {
     color: #FFCB47 !important;
+}
+
+code {
+    background-color: #353831;
 }
