@@ -27,6 +27,7 @@
 html,
 body {
     height: 100%;
+    font-family: 'Encode Sans Condensed', sans-serif;
 }
 
 body {
@@ -146,9 +147,6 @@ footer {
     color: #FFCB47 !important;
 }
 
-code {
-    background-color: #353831;
-}
 
 /* Button Styling */
 .btn-primary {
