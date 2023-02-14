@@ -76,97 +76,101 @@
                 <pre class="line-numbers">
                     <code class="language-js">
                         // Get User Input from Page
-// Controller Function/ Entry Point
-function getValues() {
-    //Get Values
-    let startValue = document.getElementById('startValue').value
-    let endValue = document.getElementById('endValue').value
-    //Parse inputs as numbers
+                        // Controller Function/ Entry Point
 
-    startValue = parseInt(startValue);
-    endValue = parseInt(endValue);
+                        <a href="#getValuesSection" class="text-decoration-none" id="getValuesCode">function getValues()</a> 
+                        {
+                            //Get Values
+                            let startValue = document.getElementById('startValue').value
+                            let endValue = document.getElementById('endValue').value
 
 
-    //  Verify our inputs are numbers
-    if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
-        // Generate the Numbahs
-
-        let numbersArray = generateNumbers(startValue, endValue);
-
-        // Display the numbahs
-
-        displayNumbers(numbersArray);
-
-    } else {
-        // If not, call them a goof.
-        Swal.fire(
-            {
-                icon: 'error',
-                title: 'Whoops!',
-                text: "Dubloons are numbers only, you goof!"
-            }
-        )
-    }
+                            //Parse inputs as numbers
+                            startValue = parseInt(startValue);
+                            endValue = parseInt(endValue);
 
 
+                                //  Verify our inputs are numbers
+                                if (Number.isInteger(startValue) && Number.isInteger(endValue)) 
+                                {
+                                    // Generate the Numbahs
+                                    let numbersArray = generateNumbers(startValue, endValue);
 
-}
+                                    // Display the numbahs
+                                    displayNumbers(numbersArray);
 
-
-// Generate numbers
-// Logic functions
-function generateNumbers(start, end) {
-
-    let numbers = [];
-
-    for (let i = start; i <= end; i++) {
-        numbers.push(i);
-    }
-
-    return numbers;
-
-}
-
-
-//Display them on the page
-//  View Function - Make it show up.
-function displayNumbers(numbersArray) {
-    let tableBody = document.getElementById('dubloonCount');
-    let tableHTML = "";
+                                }
+                                else 
+                                {
+                                    // If not, call them a goof.
+                                    Swal.fire
+                                    ({
+                                            icon: 'error',
+                                            title: 'Whoops!',
+                                            text: "Dubloons are numbers only, you goof!"
+                                    })
+                                }
+                        }
 
 
-    for (let i = 0; i < numbersArray.length; i++) {
+                        // Generate numbers
+                        // Logic functions
+                        <a href="#generateNumbersSection" class="text-decoration-none" id="generateNumbersCode">function generateNumbers(start, end)</a> 
+                        {
+                            let numbers = [];
 
-        let value = numbersArray[i];
-        let className = '';
-        value % 2 == 0 ? className = 'even' : className = 'odd'
+                                for (let i = start; i <= end; i++)
+                                {
+                                    numbers.push(i);
+                                }
 
-
-
-        if (i % 5 == 0) {
-            tableHTML += '&lt;tr>';
-        }
-
-
-        tableHTML += `&lt;td class="${className}">${value}&lt;/td>`
-
-        if ((i + 1) % 5 == 0) {
-            tableHTML += '&lt;/tr>';
-        }
+                            return numbers;
+                        }
 
 
-    }
+                        //Display them on the page
+                        //  View Function - Make it show up.
+                        <a href="#displayNumbersSection" class="text-decoration-none" id="displayNumbersCode">function displayNumbers(numbersArray)</a> 
+                        {
+                            let tableBody = document.getElementById('dubloonCount');
+                            let tableHTML = "";
 
-    tableBody.innerHTML = tableHTML;
-}
+                                for (let i = 0; i < numbersArray.length; i++) 
+                                {
+                                    let value = numbersArray[i];
+                                    let className = '';
+                                    value % 2 == 0 ? className = 'even' : className = 'odd';
+
+                                        if (i % 5 == 0) 
+                                        {
+                                            tableHTML += '&lt;tr>';
+                                        }
+
+
+                                    tableHTML += `&lt;td class="${className}">${value}&lt;/td>`
+
+                                        if ((i + 1) % 5 == 0) 
+                                        {
+                                            tableHTML += '&lt;/tr>';
+                                        }
+                                }
+                                
+                            tableBody.innerHTML = tableHTML;
+                        }
                     </code>
                 </pre>
 
             </div>
             <!-- Code Description -->
             <div class="col col-12 col-md-4">
-                <p>This code is structured in three functions.</p>
-                <h4><code>getValues()</code></h4>
+                <p>The code is structured in five functions. Called functions will be detailed in their own sections.
+                    Click a <code class="language-js">headline()</code> to scroll to that section of the code. And click
+                    the function name within the code to scroll to that write up section.</p>
+                <br>
+                <a href="#getValuesCode" class="text-decoration-none">
+                    <h4><code class="language-js fs-4" id="getValuesSection">getValues()</code></h4>
+                </a>
+                <hr>
                 <p class="mb-3">This function grabs the input values from our startValue and endValue elements. It then
                     parses those
                     strings into integers. Following that, we verify the inputs are numbers as a quick check. If they
@@ -174,12 +178,20 @@ function displayNumbers(numbersArray) {
                     <code>generateNumbers()</code> and then <code>displayNumbers()</code>. If they are not numbers we
                     use a sweet alert to call them a goof, as pirates do.
                 </p>
-                <h4><code>generateNumbers()</code></h4>
+                <br>
+                <a href="#generateNumbersCode" class="text-decoration-none">
+                    <h4><code class="language-js" id="generateNumbersSection">generateNumbers()</code></h4>
+                </a>
+                <hr>
                 <p class="mb-3">This function generates an array starting with the startValue number and counting up
                     until it reaches
                     the endValue number. It then <code>returns numbers</code>.
                 </p>
-                <h4><code>displayNumbers()</code></h4>
+                <br>
+                <a href="#displayNumbersCode" class="text-decoration-none">
+                    <h4><code class="language-js" id="displayNumbersSection">displayNumbers()</code></h4>
+                </a>
+                <hr>
                 <p class="">This function is used to display the numbers on the webpage for the user. First it is
                     passed the argument of numbersarray. It grabs the id of the table where we want to display them.
                     Then a blank string is assigned to tableHTML. Next, our for loop runs through a number of ternary
@@ -196,6 +208,10 @@ function displayNumbers(numbersArray) {
                 <p>Finally, it places the created element into the HTML and it is displayed for the user on the page.
                 </p>
 
+            </div>
+            <hr>
+            <div class="text-end mb-2"><a href="#" class="text-decoration-none"><code
+                        class="language-js">returnToTop()</code></a>
             </div>
         </div>
 
